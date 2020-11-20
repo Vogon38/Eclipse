@@ -32,7 +32,6 @@ public class Exerc_1 {
 				} else {
 					System.out.println("Está no peso ideal");
 				}
-				break;		
 			case "feminino":
 				if (peso > fem) {
 					System.out.println("Está acima do peso");
