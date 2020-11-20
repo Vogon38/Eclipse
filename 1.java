@@ -9,8 +9,7 @@ public class Exerc_1 {
 		
 		String sexo = "";
 		double h = 0, peso = 0;
-			
-						
+								
 		System.out.print("Informe o sexo: ");
 		sexo = entrada.nextLine();
 		
