@@ -44,7 +44,7 @@ public class Exerc_1 {
 				if (peso > fem) {
 					System.out.println("Está acima do peso");
 				} else if (peso < fem) {
-					System.out.println("Esta abaixo do peso");
+					System.out.println("Está abaixo do peso");
 				} else {
 					System.out.println("Está no peso ideal");
 				}
