@@ -1,10 +1,12 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exerc_1 {
 
 	public static void main(String[] args) {
 		
-		@SuppressWarnings("resource")
+		DecimalFormat df = new DecimalFormat("##.###");
+		
 		Scanner entrada = new Scanner(System.in);
 		
 		String sexo = "";
@@ -22,6 +24,8 @@ public class Exerc_1 {
 		System.out.print("Informe o peso: ");
 		peso = entrada.nextDouble();
 		
+		System.out.print("\n");
+		
 		switch (sexo) {
 		
 			case "masculino":
@@ -33,7 +37,7 @@ public class Exerc_1 {
 					System.out.println("Está no peso ideal");
 				}
 				
-				System.out.printf("Seu peso ideal é " + masc);
+				System.out.printf("Seu peso ideal é " + df.format(masc));
 				break;
 				
 			case "feminino":
@@ -45,7 +49,7 @@ public class Exerc_1 {
 					System.out.println("Está no peso ideal");
 				}
 				
-				System.out.printf("Seu peso ideal é " + fem);
+				System.out.printf("Seu peso ideal é " + df.format(fem));
 		}
 	}
 }
