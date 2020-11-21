@@ -20,17 +20,17 @@ public class Exerc_2 {
 			perc = "20%";
 			aumento = ((20 * atual)/100);
 			reajuste = aumento + atual;
-		}else{
+		} else {
 			if (atual > 280 & atual <= 700) {
 				perc = "15%";
 				aumento = ((15 * atual)/100);
 				reajuste = aumento + atual;
-			}else {
+			} else {
 				if (atual > 700 & atual <= 1500) {
 					perc = "10%";
 					aumento = ((10 * atual)/100);
 					reajuste = aumento + atual;
-				}else {
+				} else {
 					if (atual > 1500) {
 						perc = "5%";
 						aumento = ((5 * atual)/100);
