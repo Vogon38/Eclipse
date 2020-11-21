@@ -9,7 +9,8 @@ public class Exerc_1 {
 		
 		String sexo = "";
 		double h = 0, peso = 0;
-								
+			
+						
 		System.out.print("Informe o sexo: ");
 		sexo = entrada.nextLine();
 		
@@ -27,10 +28,14 @@ public class Exerc_1 {
 				if (peso > masc) {
 					System.out.println("Está acima do peso");
 				} else if (peso < masc) {
-					System.out.println("Esta abaixo do peso");
+					System.out.println("Está abaixo do peso");
 				} else {
 					System.out.println("Está no peso ideal");
 				}
+				
+				System.out.printf("Seu peso ideal é " + masc);
+				break;
+				
 			case "feminino":
 				if (peso > fem) {
 					System.out.println("Está acima do peso");
@@ -39,6 +44,8 @@ public class Exerc_1 {
 				} else {
 					System.out.println("Está no peso ideal");
 				}
+				
+				System.out.printf("Seu peso ideal é " + fem);
 		}
 	}
 }
