@@ -10,8 +10,9 @@ public class Exerc_2 {
 		DecimalFormat df = new DecimalFormat("##.##");
 		
 		float atual = 0, reajuste = 0, aumento = 0;
-		String perc = "0";
+		String perc = "";
 		
+		System.out.println("-----------------------------------------------------------");
 		System.out.print("Informe o salário: ");
 		atual = entrada.nextFloat();
 		
@@ -39,8 +40,8 @@ public class Exerc_2 {
 			}
 		}
 		
+		System.out.println("-----------------------------------------------------------");
 		System.out.println("O salário antes do reajuste era " + atual + " reais");
-		System.out.print("\n");
 		System.out.println("O percentual de aumento aplicado foi " + perc);
 		System.out.println("O valor do aumento é " + df.format(aumento) + " reais");
 		System.out.println("O novo salário após o aumento é " + df.format(reajuste) + " reais");
