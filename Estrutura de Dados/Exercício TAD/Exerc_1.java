@@ -35,7 +35,7 @@ public class Exerc_1 {
             verifica2 = 11 - verifica2 % 11;
         }
         
-        comparador = (d1 + d2 + d3 + "." + d4 + d5 + d6 + "." + d7 + d8 + 9 + "-" + verifica1 + "" + verifica2);
+        comparador = (d1 + d2 + d3 + "." + d4 + d5 + d6 + "." + d7 + d8 + d9 + "-" + verifica1 + "" + verifica2);
         
         System.out.println(comparador);
         
