@@ -7,7 +7,7 @@ public class Exerc_1 {
 		
         String cpf = "";
         String d1, d2, d3, d4, d5, d6, d7, d8, d9, comparador ="";
-		int n1, n2, n3, n4, n5, n6, n7, n8, n9, verifica1, verifica2, comparador1;
+	int n1, n2, n3, n4, n5, n6, n7, n8, n9, verifica1, verifica2, comparador1;
         
         cpf = JOptionPane.showInputDialog("Digite seu CPF neste formato (123.456.789-11): ");
           
