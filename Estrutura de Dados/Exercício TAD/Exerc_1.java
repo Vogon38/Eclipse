@@ -7,7 +7,7 @@ public class Exerc_1 {
 		
         String cpf = "";
         String d1, d2, d3, d4, d5, d6, d7, d8, d9, comparador ="";
-        int n1, n2, n3, n4, n5, n6, n7, n8, n9, verifica1, verifica2;
+		int n1, n2, n3, n4, n5, n6, n7, n8, n9, verifica1, verifica2, comparador1;
         
         cpf = JOptionPane.showInputDialog("Digite seu CPF neste formato (123.456.789-11): ");
           
@@ -36,13 +36,18 @@ public class Exerc_1 {
         }
         
         comparador = (d1 + d2 + d3 + "." + d4 + d5 + d6 + "." + d7 + d8 + d9 + "-" + verifica1 + "" + verifica2);
+        comparador1 = (n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9);
         
         System.out.println(comparador);
         
-        if(comparador.equals(cpf)) {
-            JOptionPane.showMessageDialog(null, "CPF correto :)");
-        } else {
-            JOptionPane.showMessageDialog(null, "CPF incorreto :(");
-        }
+        if (comparador1 == 0 | comparador1 == 9) {
+        	JOptionPane.showMessageDialog(null, "CPF incorreto :(");
+	    } else {
+	    	if (comparador.equals(cpf)) {
+	    		JOptionPane.showMessageDialog(null, "CPF correto :)");
+	    } else {
+	    	JOptionPane.showMessageDialog(null, "CPF incorreto :(");
+		}
+	    }
     }
 }
