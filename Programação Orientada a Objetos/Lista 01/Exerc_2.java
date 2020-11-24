@@ -13,38 +13,36 @@ public class Exerc_2 {
 		String perc = "";
 		
 		System.out.println("-----------------------------------------------------------");
-		System.out.print("Informe o sal·rio: ");
+		System.out.print("Informe o sal√°rio: ");
 		atual = entrada.nextFloat();
 		
 		if (atual <= 280) {
 			perc = "20%";
 			aumento = ((20 * atual)/100);
-			reajuste = aumento + atual;
 		} else {
 			if (atual > 280 & atual <= 700) {
 				perc = "15%";
 				aumento = ((15 * atual)/100);
-				reajuste = aumento + atual;
 			} else {
 				if (atual > 700 & atual <= 1500) {
 					perc = "10%";
 					aumento = ((10 * atual)/100);
-					reajuste = aumento + atual;
 				} else {
 					if (atual > 1500) {
 						perc = "5%";
 						aumento = ((5 * atual)/100);
-						reajuste = aumento + atual;
 					}
 				}
 			}
+			
+			reajuste = aumento + atual;
 		}
 		
 		System.out.println("-----------------------------------------------------------");
-		System.out.println("O sal·rio antes do reajuste era " + atual + " reais");
+		System.out.println("O sal√°rio antes do reajuste era " + df.format(atual) + " reais");
 		System.out.println("O percentual de aumento aplicado foi " + perc);
-		System.out.println("O valor do aumento È " + df.format(aumento) + " reais");
-		System.out.println("O novo sal·rio apÛs o aumento È " + df.format(reajuste) + " reais");
+		System.out.println("O valor do aumento √© " + df.format(aumento) + " reais");
+		System.out.println("O novo sal√°rio ap√≥s o aumento √© " + df.format(reajuste) + " reais");
 		
 	}
 }
