@@ -14,9 +14,9 @@ public class Exerc_3 {
 		valor = entrada.nextDouble();
 		
 		if (valor < 10) {
-			System.out.println("Valor indisponÃ­vel. MÃ­nimo de 10 reais.");
+			System.out.println("Valor indisponível. Mínimo de 10 reais.");
 		} else if (valor > 600) {
-			System.out.println("Valor indisponÃ­vel. MÃ¡ximo de 600 reais.");
+			System.out.println("Valor indisponível. Máximo de 600 reais.");
 		} else {
 			cem = (int)(valor/100);
 			valor = valor % 100;

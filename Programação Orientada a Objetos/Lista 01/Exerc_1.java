@@ -29,27 +29,27 @@ public class Exerc_1 {
 			case "masculino":
 				double masc = (72.7*h)-58;
 				if (peso > masc) {
-					System.out.println("Est√° acima do peso.");
+					System.out.println("Est· acima do peso.");
 				} else if (peso < masc) {
-					System.out.println("Est√° abaixo do peso.");
+					System.out.println("Est· abaixo do peso.");
 				} else {
-					System.out.println("Est√° no peso ideal.");
+					System.out.println("Est· no peso ideal.");
 				}
 				
-				System.out.printf("Seu peso ideal √© " + df.format(masc));
+				System.out.printf("Seu peso ideal È " + df.format(masc));
 				break;
 				
 			case "feminino":
 				double fem = (62.1*h)-44.7;
 				if (peso > fem) {
-					System.out.println("Est√° acima do peso.");
+					System.out.println("Est· acima do peso.");
 				} else if (peso < fem) {
-					System.out.println("Est√° abaixo do peso.");
+					System.out.println("Est· abaixo do peso.");
 				} else {
-					System.out.println("Est√° no peso ideal.");
+					System.out.println("Est· no peso ideal.");
 				}
 				
-				System.out.printf("Seu peso ideal √© " + df.format(fem));
+				System.out.printf("Seu peso ideal È " + df.format(fem));
 		}
 	}
 }
