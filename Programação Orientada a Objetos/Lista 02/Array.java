@@ -66,9 +66,6 @@ public class Array {
 				if (pares[i] != 0) {
 					System.out.println("O número " + pares[i] + " no índice " + indicePares[i] + " é par");
 				}
-			}
-			
-			for (i=0; i<qtd; i++) {
 				if (impares[i] != 0) {
 					System.out.println("O número " + impares[i] + " no índice " + indiceImpares[i] + " é ímpar");
 				}
@@ -82,7 +79,7 @@ public class Array {
 			
 			}
 		
-	}
+		}
 } 
 
 		
