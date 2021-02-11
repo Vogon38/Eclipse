@@ -13,10 +13,15 @@ public class Array {
 		Scanner entrada = new Scanner(System.in);
 		
 		while(again == 's') {
-			do {
-				System.out.print("Informe a quantidade (inteiro) de valores que deverão ser gerados: ");
-				qtd = entrada.nextInt();
-			} while ((qtd == 0) || (qtd < 0));
+			System.out.print("Informe a quantidade (inteiro) de valores que deverÃ£o ser gerados: ");
+			qtd = entrada.nextInt();
+			
+			if ((qtd == 0) || (qtd < 0))
+				do {
+					System.out.println();
+					System.out.print("NÃºmero invÃ¡lido.\nInforme a quantidade (inteiro) de valores que deverÃ£o ser gerados: ");
+					qtd = entrada.nextInt();
+				} while ((qtd == 0) || (qtd < 0));
 			
 			int vetor[] = new int[qtd];
 			int pares[] = new int[qtd];
@@ -31,7 +36,7 @@ public class Array {
 				aleatorio = generator.nextInt(valor);
 				vetor[i] = aleatorio;
 				
-				System.out.println("Valor do Vetor na posição "+ i +" é.: " + vetor[i]);
+				System.out.println("Valor do Vetor na posiÃ§Ã£o "+ i +" Ã©.: " + vetor[i]);
 	
 				if (vetor[i] <= menor) {
 					menor = vetor[i];
@@ -54,18 +59,18 @@ public class Array {
 			
 			
 			
-			System.out.println("O maior número é.: "+ maior + " no índice " + indiceMaior);
-			System.out.println("O menor número é.: "+ menor + " no índice " + indiceMenor);
+			System.out.println("O maior nÃºmero Ã©.: "+ maior + " no Ã­ndice " + indiceMaior);
+			System.out.println("O menor nÃºmero Ã©.: "+ menor + " no Ã­ndice " + indiceMenor);
 			
 			for (i=0; i<qtd; i++) {
 				if (pares[i] != 0) {
-					System.out.println("O número " + pares[i] + " no índice " + indicePares[i] + " é par");
+					System.out.println("O nÃºmero " + pares[i] + " no Ã­ndice " + indicePares[i] + " Ã© par");
 				}
 			}
 			
 			for (i=0; i<qtd; i++) {
 				if (impares[i] != 0) {
-					System.out.println("O número " + impares[i] + " no índice " + indiceImpares[i] + " é ímpar");
+					System.out.println("O nÃºmero " + impares[i] + " no Ã­ndice " + indiceImpares[i] + " Ã© Ã­mpar");
 				}
 			}
 			
@@ -87,6 +92,6 @@ public class Array {
 
 for (i=0; i<qtd; i++) {
 
-System.out.println("Valor do Vetor na posição "+ i +" é.:" + vetor[i]);
+System.out.println("Valor do Vetor na posiÃ§Ã£o "+ i +" Ã©.:" + vetor[i]);
 
 */
