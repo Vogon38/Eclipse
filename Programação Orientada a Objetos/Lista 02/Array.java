@@ -4,9 +4,10 @@ import java.util.Scanner;
 public class Array {
 
 	public static void main(String[] args) {
-		int aleatorio, qtd, valor = 5001, i, 
+		int aleatorio, qtd, valor = 5001, i, j,
 			maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE, 
-			indiceMaior = 0, indiceMenor = 0;
+			indiceMaior = 0, indiceMenor = 0, somaTotal = 0;
+		float media = 0;
 		char again;
 		again = 's';
 		
@@ -28,6 +29,8 @@ public class Array {
 			int indicePares[] = new int[qtd];
 			int impares[] = new int[qtd];
 			int indiceImpares[] = new int[qtd];
+			int indicePrimos[] = new int[qtd];
+			boolean[] primos = new boolean[qtd];
 			
 			for (i=0; i<qtd; i++) {
 			
@@ -38,6 +41,8 @@ public class Array {
 				
 				System.out.println("Valor do Vetor na posição "+ i +" é.: " + vetor[i]);
 	
+				somaTotal = somaTotal + vetor[i];
+				
 				if (vetor[i] <= menor) {
 					menor = vetor[i];
 					indiceMenor = i;
@@ -55,10 +60,23 @@ public class Array {
 					impares[i] = vetor[i];
 					indiceImpares[i] = i;
 				}
+				
+				for (j=2; j<vetor[i]; j++) {
+					if ((vetor[i] % j) == 0) {
+						primos[i] = false;
+							break;
+					} else {
+						primos[i] = true;
+						indicePrimos[i] = i;
+					}
+				}
+			
 			}
 			
+			media = somaTotal/qtd;
 			
-			
+			System.out.println("A soma total dos números é.: " + somaTotal);
+			System.out.println("A média dos números é.: " + media);
 			System.out.println("O maior número é.: "+ maior + " no índice " + indiceMaior);
 			System.out.println("O menor número é.: "+ menor + " no índice " + indiceMenor);
 			
@@ -66,29 +84,27 @@ public class Array {
 				if (pares[i] != 0) {
 					System.out.println("O número " + pares[i] + " no índice " + indicePares[i] + " é par");
 				}
+			}
+			
+			for (i=0; i<qtd; i++) {
 				if (impares[i] != 0) {
 					System.out.println("O número " + impares[i] + " no índice " + indiceImpares[i] + " é ímpar");
 				}
 			}
 			
+			for (i=0; i<qtd; i++) {
+				if(primos[i]) {
+					System.out.println("O número " + vetor[i] + " no índice " + indicePrimos[i] + " é primo");
+				}
+			}
+				
 			System.out.println();
 			System.out.print("Vamos tentar de novo? :)\n(S/N): ");
 			again = entrada.next().charAt(0);
 			again = Character.toLowerCase(again);
 			System.out.println();
 			
-			}
-		
 		}
-} 
-
 		
-
-
-/* System.out.println("Numero digitado: "+ qtd);
-
-for (i=0; i<qtd; i++) {
-
-System.out.println("Valor do Vetor na posição "+ i +" é.:" + vetor[i]);
-
-*/
+	}
+} 
